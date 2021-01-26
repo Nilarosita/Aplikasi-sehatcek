@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Log In Sehat Cek</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: AvantGarde Bk BT;
+    }
+        .main{
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(rgba(9, 48, 89, 0.4),rgba(0,0,0,0.4)),url(background1.png);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        }
+            .logo{
+            margin: 30px auto;
+            text-align: center;
+            }
+                .logo img{
+                    width: 300px;
+                    margin: 0 5px;
+                    box-shadow: 0 0 20px 0 #7f7f7f3d;
+                }
+            .form-box{
+            width: 380px;
+            height: 380px;
+            position: relative;
+            margin: 2% auto;
+            padding: 5px;
+            border-radius: 50px;
+            }
+            .input-group{
+            width: 360px;
+            padding: 10% 0 0 ;
+            margin: auto;
+            position: relative;
+
+            }
+                .input-field{
+                outline: 1;
+                background: white;
+                width: 100%;
+                border: 0;
+                margin: 0 0 15px;
+                padding: 15px;
+                box-sizing: border-box;
+                font-size: 14px;
+                color: rgb(29, 105, 123);
+                border-radius: 50px;
+                }
+                .submit-btn{
+                    width: 85%;
+                    padding: 10px 30px;
+                    cursor: pointer;
+                    display: block;
+                    margin: auto;
+                    background: linear-gradient(to right,#086d8c,#70c4d675);
+
+                    font-size: 14px;
+                    color: rgb(255, 255, 255);
+                    border: 0;
+                    outline: none;
+                    border-radius: 30px;
+                }
+                .submit-btn:hover,
+                .submit-btn:active{
+                    background : #43a047;
+                }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <div class="form-box">
+            <form class="input-group">
+                <form>
+                    <input type="text" class="input-field" id="username" placeholder="Username"></input>
+                    <input type="password" class="input-field" id="password" placeholder="Password"></input>
+                    <center><button type="button" class="submit-btn" id="login-btn" onclick="validasiLogin()">LOG IN</button></center>
+                </form>
+        </div>
+    </div>
+</body>
+<script src="loginClass.js"></script>
+<script>
+    //JIKA USERNAME = "user" dan PASSWORD = "user", maka akan diarahkan kepada halaman khusus user
+    //JIKA USERNAME = "admin" dan PASSWORD = "admin", maka akan diarahkan kepada halaman khusus untuk petugas / admin
+
+    function validasiLogin() {
+        let inputUsername = document.getElementById("username").value;
+        let inputPassword = document.getElementById("password").value;
+
+        console.log(inputUsername);
+        console.log(inputPassword);
+
+        let userLogin = new Login();
+        userLogin.cekLogin(inputUsername, inputPassword);
+    }
+
+</script>
+</html>

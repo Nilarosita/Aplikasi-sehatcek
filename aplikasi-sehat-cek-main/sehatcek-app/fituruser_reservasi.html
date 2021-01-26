@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Log In Sehat Cek</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>    <
+    <script>
+        function home() {
+            window.location="fituruser.html";
+        }
+    </script>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: AvantGarde Bk BT;
+    }
+        .main{
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(rgba(9, 48, 89, 0.4),rgba(0,0,0,0.4)),url(background3.png);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        }
+            .logo{
+            margin: 30px auto;
+            text-align: center;
+            }
+                .logo img{
+                    width: 300px;
+                    margin: 0 5px;
+                    box-shadow: 0 0 20px 0 #7f7f7f3d;
+                }
+            .home-btn{
+            position:absolute;
+            top:60px;
+            right:50px;
+            border-radius: 20px;
+            border : none;
+            padding : 10px 30px;
+            font-size:15px;
+            background: linear-gradient(to right,#e6df28,#0a78b3dc);
+            color: #fff;
+            cursor:pointer;
+            }
+            .home-btn:hover,
+            .home-btn:active{
+                background : #43a047;
+            }
+            .form-box{
+            width: 380px;
+            height: 380px;
+            position: relative;
+            margin: 7% auto;
+            padding: 0px;
+            border-radius: 50px;
+            }
+            .input-group{
+            width: 360px;
+            padding: 10% 0 0 ;
+            margin: auto;
+            position: relative;
+
+            }
+                .input-field{
+                outline: 1;
+                background: white;
+                width: 100%;
+                border: 0;
+                margin: 0 0 15px;
+                padding: 10px;
+                box-sizing: border-box;
+                font-size: 14px;
+                color: rgb(29, 105, 123);
+                border-radius: 50px;
+                }                
+                .submit-btn{
+                    width: 85%;
+                    padding: 10px 30px;
+                    cursor: pointer;
+                    display: block;
+                    margin: auto;
+                    background: linear-gradient(to right,#086d8c,#70c4d675);
+                    font-size: 14px;
+                    color: rgb(255, 255, 255);
+                    border: 0;
+                    outline: none;
+                    border-radius: 30px;
+                }
+                .submit-btn:hover,
+                .submit-btn:active{
+                    background : #43a047;
+                }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="logo"><img src="logo.png"></div>
+        <button type="button" class="home-btn" id="home-btn" onclick="home()">HOME</button>
+    </div>
+    <div class="form-box">
+            <form class="input-group">
+                <form action="" method="post">
+                    <input type="text" name="nama_pasien" class="input-field" id="nama_pasien" placeholder="Nama Pasien"></input>
+                    <input type="text" name="alamat" class="input-field" id="alamat" placeholder="Alamat"></input>
+                    <input type="number" name="usia" class="input-field" id="usia" placeholder="Usia"></input>
+                    <input type="text" name="keluhan" class="input-field" id="keluhan" placeholder="Keluhan"></input>
+                    <input type="number" name="no_kartukesehatan" class="input-field" id="no_kartukesehatan" placeholder="No Kartu Kesehatan"></input>
+                    <input type="number" name="no_telepon" class="input-field" id="no_telepon" placeholder="No Telepon"></input>
+                    <input type="text" name="rs" class="input-field" id="rs" placeholder="Nama RS/Klinik"></input>
+                    <input type="text" name="dokter" class="input-field" id="dokter" placeholder="Nama Dokter"></input>
+                    <input type="date" name="jadwal" class="input-field" id="jadwal" placeholder="Jadwal Reservasi"></input>
+                    <input type="submit" value="Simpan" name="proses" class="submit-btn" onclick="simpan()"></input>
+                </form>
+            </form>
+</body>
+<script>
+    function home() {
+        window.location="fituruser.html";
+    }
+    function simpan(){
+        window.alert("Submit Data Berhasil");
+    }
+</script>
+</html>
